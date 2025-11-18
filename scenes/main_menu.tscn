@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh2na2l3qky5b"]
+
+[ext_resource type="Script" uid="uid://cpqeb2owv4is2" path="res://scripts/main_menu.gd" id="1_r02ye"]
+[ext_resource type="Texture2D" uid="uid://curk4qkav6w4b" path="res://assets/sprites/windrise-background.png" id="2_bg"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_r02ye")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_bg")
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 45.0
+offset_right = 1155.0
+offset_bottom = 71.0
+theme_type_variation = &"HeaderLarge"
+text = "Plataformas 2D"
+horizontal_alignment = 1
+
+[node name="Options" type="VFlowContainer" parent="."]
+offset_left = 512.0
+offset_top = 226.0
+offset_right = 654.0
+offset_bottom = 465.0
+
+[node name="StartButton" type="Button" parent="Options"]
+layout_mode = 2
+text = "Iniciar"
+
+[node name="FullscreenButton" type="Button" parent="Options"]
+layout_mode = 2
+text = "Pantalla Completa"
+
+[node name="QuitButton" type="Button" parent="Options"]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="Options/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Options/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Options/QuitButton" to="." method="_on_quit_button_pressed"]

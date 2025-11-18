@@ -1,0 +1,18 @@
+# Placeholder: hurt.wav
+
+Este archivo es un placeholder para el efecto de sonido de daño del jugador.
+
+## Instrucciones para reemplazar:
+1. Obtén o crea un archivo de audio para el sonido de daño (formato WAV u OGG)
+2. Renombra el archivo a `hurt.wav` o `hurt.ogg`
+3. Coloca el archivo en esta carpeta: `assets/audio/sfx/`
+4. En Godot Editor, abre la escena `scenes/player.tscn`
+5. Selecciona el nodo `HurtSfx` (AudioStreamPlayer)
+6. En el Inspector, asigna el archivo de audio a la propiedad "Stream"
+7. Ajusta el volumen según sea necesario (propiedad "Volume Db")
+8. Elimina este archivo placeholder
+
+## Características recomendadas:
+- Duración: 0.2 - 0.5 segundos
+- Tipo: Sonido de impacto o dolor
+- Volumen: Similar a jump.wav (-2.0 dB)

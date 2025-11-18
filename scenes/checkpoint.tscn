@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8vqm5xjy7k3p"]
+
+[ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_checkpoint"]
+[ext_resource type="Texture2D" uid="uid://cmyw7fmkbaox3" path="res://assets/sprites/monochrome_tilemap_transparent.png" id="2_tilemap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_checkpoint"]
+size = Vector2(16, 24)
+
+[node name="Checkpoint" type="Area2D"]
+script = ExtResource("1_checkpoint")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.8, 0.8, 0.8, 1)
+texture = ExtResource("2_tilemap")
+region_enabled = true
+region_rect = Rect2(0, 119, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_checkpoint")
+
+[node name="ActivationSfx" type="AudioStreamPlayer" parent="."]
+volume_db = -2.0

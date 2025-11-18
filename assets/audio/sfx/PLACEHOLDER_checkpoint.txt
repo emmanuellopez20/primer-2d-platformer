@@ -1,0 +1,18 @@
+# Placeholder: checkpoint.wav
+
+Este archivo es un placeholder para el efecto de sonido de activación de checkpoint.
+
+## Instrucciones para reemplazar:
+1. Obtén o crea un archivo de audio para el sonido de checkpoint (formato WAV u OGG)
+2. Renombra el archivo a `checkpoint.wav` o `checkpoint.ogg`
+3. Coloca el archivo en esta carpeta: `assets/audio/sfx/`
+4. En Godot Editor, abre la escena `scenes/checkpoint.tscn` (cuando se cree)
+5. Selecciona el nodo AudioStreamPlayer del checkpoint
+6. En el Inspector, asigna el archivo de audio a la propiedad "Stream"
+7. Ajusta el volumen según sea necesario
+8. Elimina este archivo placeholder
+
+## Características recomendadas:
+- Duración: 0.3 - 0.8 segundos
+- Tipo: Sonido de confirmación o activación (ej: campanita, chime)
+- Volumen: -2.0 a 0.0 dB
